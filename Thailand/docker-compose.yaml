@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  selenium:
+    image: selenium/standalone-chrome:latest
+    ports:
+    - 4444:4444
+    shm_size: '1gb'
+    restart: always
+
+  elasticsearch:
+    container_name: es-container
+    image: elasticsearch:8.2.2
+    environment:
+      - xpack.security.enabled=false
+      - "discovery.type=single-node"
+    ports:
+      - 9200:9200
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile-app
+    volumes:
+    - ./app:/app
+    ports:
+      - 5000:5000
+    command: sh -c "python3 app.py"
+    depends_on:
+      - elasticsearch 
+
+  scrapper:
+    build:
+      context: .
+      dockerfile: Dockerfile-scrap
+    volumes:
+    - ./app:/scrap
+    command: sh -c "python3 scrapp_app.py"
+    depends_on:
+      - elasticsearch
+      - selenium
+
+

@@ -1,0 +1,136 @@
+openapi: 3.0.0
+info:
+ title: Polish API
+ version: 1.0.0
+paths:
+ /api/consulates:
+   get:
+     summary: Returns a list of consulates.
+     description: consulates
+     responses:
+       '200':
+         description: A JSON array of consulates
+         content:
+           application/json:
+             schema:
+               type: array
+               items:
+                 $ref: '#/components/schemas/Consulate'
+ /api/vac:
+   get:
+     summary: Returns a list of visa centers.
+     description: visa centers
+     responses:
+       '200':
+         description: A JSON array of visa centers
+         content:
+           application/json:
+             schema:
+               type: array
+               items:
+                 $ref: '#/components/schemas/VisaCenter'
+ /api/news:
+   get:
+     summary: Returns a list of news.
+     description: news
+     responses:
+       '200':
+         description: A JSON array of news
+         content:
+           application/json:
+             schema:
+               type: array
+               items:
+                 $ref: '#/components/schemas/News'
+ /api/vac_and_consulates:
+   get:
+     summary: Returns a list of visa centers and consulates.
+     description: visa centers and consulates
+     responses:
+       '200':
+         description: A JSON array of visa centers and consulates
+         content:
+           application/json:
+             schema:
+               type: array
+               items:
+                 $ref: '#/components/schemas/vc_and_consulates'
+ /api/all_data:
+   get:
+     summary: Returns a list of all data.
+     description: all data
+     responses:
+       '200':
+         description: A JSON array of all data
+         content:
+           application/json:
+             schema:
+               type: array
+               items:
+                 $ref: '#/components/schemas/All_data'
+components:
+ schemas:
+   Consulate:
+     properties:
+       address:
+         type: string
+       phone:
+         type: string
+       working hours:
+         type: string
+       working hours for delivery of docs:
+         type: string
+       working hours for get a visa:
+         type: string
+   VisaCenter:
+     properties:
+       address:
+         type: string
+       city:
+         type: string
+       opening_hours:
+         type: array
+         items:
+          $ref: '#/components/schemas/OpeningHoursVC'
+   News:
+     properties:
+       date:
+         type: string
+       link:
+         type: string
+       news:
+         type: string
+   vc_and_consulates:
+     properties:
+       consulates info:
+         type: array
+         items:
+          $ref: '#/components/schemas/Consulate'
+       visa centers info:
+         type: array
+         items:
+          $ref: '#/components/schemas/VisaCenter'
+   All_data:
+     properties:
+       consulates info:
+         type: array
+         items:
+          $ref: '#/components/schemas/Consulate'
+       news:
+         type: array
+         items:
+          $ref: '#/components/schemas/News'
+       visa centers info:
+         type: array
+         items:
+          $ref: '#/components/schemas/VisaCenter'
+   OpeningHoursVC:
+    properties:
+     day:
+      type: string
+     description:
+      type: string
+     hours:
+      type: string
+
+

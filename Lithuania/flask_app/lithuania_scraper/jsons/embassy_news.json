@@ -1,0 +1,26 @@
+[
+    {
+        "Страна": "Литва",
+        "Тип": "Новости"
+    },
+    {
+        "link": "news/litobskoe-posol-jstbo-b-belarusi-bozovnoblaaet-bjydachu-biz-1",
+        "title": "Литовское посольство в Беларуси возобновляет выдачу виз",
+        "date": "2021.07.21"
+    },
+    {
+        "link": "news/ministerstbo-inostrannjyh-del-litbjy-nastoaatel-jno-rekomenduet-ne-poseshat-j-respuvliku-belarus-j",
+        "title": "Министерство иностранных дел Литвы настоятельно рекомендует не посещать Республику Беларусь",
+        "date": "2021.05.24"
+    },
+    {
+        "link": "news/zakonchilis-j-ustanoblennjye-dlaa-perebozchikob-kbotjy",
+        "title": "Закончились установленные для перевозчиков квоты",
+        "date": "2021.05.20"
+    },
+    {
+        "link": "news/v-posol-jstbe-litbjy-b-minske-posol-jstba-litbjy-i-pol-jschi-bmeste-otmetili-230-letie-prinaatiaa-konstitutsii-3-maaa-",
+        "title": "В посольстве Литвы в Минске посольства Литвы и Польши вместе отметили 230-летие принятия Конституции 3 Мая ",
+        "date": "2021.05.03"
+    }
+]

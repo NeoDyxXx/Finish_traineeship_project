@@ -1,0 +1,18 @@
+body{
+	background-color: #161925 ;
+}
+
+.adres{
+	text-align: center;
+	font-size: 70px;
+	color: white;
+}
+
+.embassy{
+	float: right;
+}
+
+.viscentr{
+	float: left;
+}
+

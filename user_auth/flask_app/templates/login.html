@@ -1,0 +1,92 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    {#    <div style="margin-top: 50px;" class="ui container">#}
+    {#        <h1 class="ui center aligned header">Login page</h1>#}
+    {#        {% with errors = get_flashed_messages() %}#}
+    {#            {% if errors %}#}
+    {#                <div class="alert-message block-message error">#}
+    {#                    <a class="close" href="#">×</a>#}
+    {#                    <ul>#}
+    {#                        {%- for msg in errors %}#}
+    {#                            <li>{{ msg }}</li>#}
+    {#                        {% endfor -%}#}
+    {#                    </ul>#}
+    {#                </div>#}
+    {#            {% endif %}#}
+    {#        {% endwith %}#}
+    {#        <form class="ui form" action="" method="post">#}
+    {#            {{ form.hidden_tag() }}#}
+    {#            <div class="field">#}
+    {#                <label>{{ form.email.label() }}</label>#}
+    {#                {{ form.email }}#}
+    {#            </div>#}
+    {#            <div class="field">#}
+    {#                <label>{{ form.password.label() }}</label>#}
+    {#                {{ form.password }}#}
+    {#            </div>#}
+    {#            <div class="field">#}
+    {#                <div class="ui checkbox">#}
+    {#                    {{ form.remember.label() }}#}
+    {#                    {{ form.remember }}#}
+    {#                </div>#}
+    {#            </div>#}
+    {#            <button class="fluid ui purple button" type="submit">Login</button>#}
+    {#        </form>#}
+    {##}
+    {#        <div class="ui message">#}
+    {#            <a href="{{ url_for('register') }}">Don't have an account? Sign Up</a>#}
+    {#        </div>#}
+    {#    </div>#}
+    <div class="pagelogin">
+        <div class="wrapper">
+            <h1 class='title' id="titlereg">Login Form</h1>
+            <p class='description' id="desclog">Login in your account in the application "THE LOOP"</p>
+            {% with errors = get_flashed_messages(category_filter=["message"]) %}
+                {% if errors %}
+                    <div class="alert-message block-message error" id="error-msg">
+                        <a class="close" href="#"></a>
+                        <ul>
+                            {%- for msg in errors %}
+                                <li>{{ msg }}</li>
+                            {% endfor -%}
+                        </ul>
+                    </div>
+                {% endif %}
+            {% endwith %}
+            <form class="ui-form" id="forml" action="/login" method="post">
+                <div class="alert-message" id="error-msg">
+                    <a class="close" href="#"></a>
+                    <ul>
+                        {%- for msg in errors %}
+                            <li>{{ msg }}</li>
+                        {% endfor -%}
+                    </ul>
+                </div>
+                {{ form.hidden_tag() }}
+                <div class="form-group" id="email">
+                    {#                    <label>{{ form.email.label() }}:</label>#}
+                    {{ form.email }}
+                </div>
+                <div class="form-group" id="password">
+                    {#                    <label>{{ form.password.label() }}:</label>#}
+                    {{ form.password }}
+                </div>
+                <button class="btn-primary" id="login-button">Login</button>
+                <div class="field">
+                    <div class="checkbox">
+                        {{ form.remember.label() }}
+                        {{ form.remember }}
+                    </div>
+                </div>
+                <div class="ui message" id="login-msg">Don't have an account?
+                    <a href="{{ url_for('register') }}"> Sign Up</a>
+                </div>
+            </form>
+
+        </div>
+        <div class="porosya"></div>
+{#        <a class="btn-primary" id="exit" href="/"> Back</a>#}
+    </div>
+{% endblock content %}

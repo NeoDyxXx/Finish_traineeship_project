@@ -1,0 +1,46 @@
+version: "3"
+
+services:
+
+  elasticsearch:
+    image: elasticsearch:7.16.2
+    container_name: elasticsearch
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      discovery.type: single-node
+      http.port: 9200
+    ports:
+    - 9200:9200
+    - 9300:9300
+    healthcheck:
+      test: curl -u elastic:elastic -s -f elasticsearch:9200/_cat/health >/dev/null || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  polish_scraper:
+    image: polish_scraper
+    container_name: polish_scraper
+    build:
+      context: polish_scraper
+    environment:
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+    ports:
+      - 8000:8000
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+
+  polish_api:
+    image: polish_api
+    container_name: polish_api
+    # restart: "on-failure"
+    build:
+      context: polish_api
+    environment:
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+    ports:
+      - 5000:5000
+    depends_on:
+      elasticsearch:
+        condition: service_healthy

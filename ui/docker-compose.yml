@@ -1,0 +1,40 @@
+version: '3.9'
+
+services:
+  database:
+    image: postgres
+    restart: always
+    ports:
+      - "5450:5450"
+    environment:
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: exampledb 
+    volumes:
+      - ./db_init.sql:/docker-entrypoint-initdb.d/db_init.sql
+      - ./postgres-data:/var/lib/postgresql/data
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5050:5050
+    command: sh -c "python3 app.py" 
+    depends_on:
+    - database
+
+  adminer:
+    image: adminer
+    restart: always
+    depends_on:
+      - database
+    ports:
+      - 8080:8080
+
+
+volumes:
+  postgres-data:
+networks:
+  app-network:
+    driver: bridge`

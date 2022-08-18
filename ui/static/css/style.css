@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic SC&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #E5E5E5;
+    font-family: 'Saira', sans-serif;
+}
+
+.page {
+    height: 100vh;
+    width: 100%;
+    background: #F9F6F1;
+}
+
+.button {
+    position: absolute;
+    width: 46px;
+    height: 410px;
+    left: 1810px;
+    top: 346px;
+}
+
+.news_frame {
+    position: absolute;
+    width: 760px;
+    height: 501px;
+    left: 761px;
+    top: 240px;    
+
+}
+
+.rectangle {
+    position: absolute;
+    width: 1920px;
+    height: 235px;
+    left: 0px;
+    top: 800px;
+    background: #212121;
+}
+
+.main-container {
+    width: 100%;
+    /* 1920px;*/
+    height: 100vh;
+    /* height: 1035px; */
+    margin: 60px auto;
+    position: relative;
+}
+
+
+.porosya {
+    position: absolute;
+    background-image: url('/static/img/porosya/1.png');
+    animation: giffy 3s infinite steps(1);
+    width: 492px;
+    height: 417px;
+    top: 400px;
+    animation-play-state: paused;
+}
+
+
+.porosya:hover {
+    animation-play-state: running;
+}
+
+@keyframes giffy {
+
+    0% {
+        background-image: url('/static/img/porosya/1.png');
+    }
+
+    4% {
+        background-image: url("/static/img/porosya/2.png");
+    }
+
+    8% {
+        background-image: url("/static/img/porosya/3.png");
+    }
+
+    12% {
+        background-image: url('/static/img/porosya/4.png');
+    }
+
+    16% {
+        background-image: url('/static/img/porosya/5.png');
+    }
+
+    20% {
+        background-image: url('/static/img/porosya/6.png');
+    }
+
+    24% {
+        background-image: url('/static/img/porosya/7.png');
+    }
+
+    28% {
+        background-image: url('/static/img/porosya/8.png');
+    }
+
+    32% {
+        background-image: url('/static/img/porosya/9.png');
+    }
+
+    36% {
+        background-image: url('/static/img/porosya/10.png');
+    }
+
+    40% {
+        background-image: url('/static/img/porosya/11.png');
+    }
+
+    44% {
+        background-image: url('/static/img/porosya/12.png');
+    }
+
+    48% {
+        background-image: url('/static/img/porosya/13.png');
+    }
+
+    52% {
+        background-image: url('/static/img/porosya/14.png');
+    }
+
+    56% {
+        background-image: url('/static/img/porosya/15.png');
+    }
+
+    60% {
+        background-image: url('/static/img/porosya/16.png');
+    }
+
+    64% {
+        background-image: url('/static/img/porosya/17.png');
+    }
+
+    68% {
+        background-image: url('/static/img/porosya/18.png');
+    }
+
+    72% {
+        background-image: url('/static/img/porosya/19.png');
+    }
+
+    76% {
+        background-image: url('/static/img/porosya/20.png');
+    }
+
+    80% {
+        background-image: url('/static/img/porosya/21.png');
+    }
+
+    84% {
+        background-image: url('/static/img/porosya/22.png');
+    }
+
+    90% {
+        background-image: url('/static/img/porosya/23.png');
+    }
+
+    100% {
+        background-image: url('/static/img/porosya/24.png');
+    }
+
+}
+
+
+
+.country {
+    position: absolute;
+    width: 105px;
+    height: 38px;
+    left: 433px;
+    top: 53px;
+
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+
+    /* identical to box height */
+    letter-spacing: 0.03em;
+
+    /* Black */
+    color: #212121;
+}
+
+.country_dot {
+    position: absolute;
+    width: 5.1px;
+    height: 7.04px;
+    left: 520px;
+    top: 59px;
+}
+
+.news {
+    position: absolute;
+    width: 109px;
+    height: 38px;
+    left: 573px;
+    top: 53px;
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+
+    /* identical to box height */
+    letter-spacing: 0.03em;
+
+    /* Black */
+    color: #212121;
+}
+
+.news_dot {
+    position: absolute;
+    width: 5.1px;
+    height: 7.04px;
+    left: 665px;
+    top: 61px;
+}
+
+
+
+.add {
+    position: absolute;
+    width: 89px;
+    height: 38px;
+    left: 717px;
+    top: 53px;
+
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+
+    /* identical to box height */
+    letter-spacing: 0.03em;
+
+    /* Black */
+    color: #212121;
+}
+
+
+.add_dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: 811px;
+    top: 64px;
+}
+
+.regist {
+    position: absolute;
+    width: 137px;
+    height: 38px;
+    left: 1188px;
+    top: 53px;
+
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+
+    /* identical to box height */
+    letter-spacing: 0.03em;
+
+    /* Black */
+    color: #212121;
+}
+
+.regist_dot {
+    position: absolute;
+    width: 5.09px;
+    height: 7.11px;
+    left: 1328px;
+    top: 58px;
+}
+
+
+.logo {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 856px;
+    top: 24px;
+
+    backdrop-filter: blur(4px);
+}
+
+.logo_text {
+    position: absolute;
+    width: 178px;
+    height: 45px;
+    left: 923px;
+    top: 37px;
+
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    /* Black */
+    color: #212121;
+}
+
+.border {
+    position: absolute;
+    width: 1920px;
+    height: 235px;
+    left: 0px;
+    top: 800px;
+}
+
+
+.norway {
+    position: absolute;
+    width: 305.73px;
+    height: 440.23px;
+    left: 215.72px;
+    top: 27px;
+    z-index: 1;
+    transition: 0.2s;
+
+}
+
+.lithuania {
+    position: absolute;
+    position: absolute;
+    width: 109px;
+    height: 88px;
+    left: 757.33px;
+    top: 242.81px;
+    bottom: 0%;
+    z-index: 0;
+    transition: 0.2s;
+}
+
+.poland {
+    position: absolute;
+    width: 238px;
+    height: 252px;
+    left: 583.33px;
+    top: 292.81px;
+    bottom: 0.11%;
+    z-index: 0;
+    transition: 0.2s;
+}
+
+.spain {
+    position: absolute;
+    width: 268px;
+    height: 281px;
+    left: 260.33px;
+    top: 462.81px;
+    bottom: 0%;
+    z-index: 1;
+    transition: 0.2s;
+}
+
+.thailand {
+    position: absolute;
+    width: 165.9px;
+    height: 293.29px;
+    left: 955.5px;
+    top: 431.95px;
+    bottom: 0.17%;
+    position: absolute;
+    z-index: 1;
+    transition: 0.2s;
+}
+
+.latvia {
+    position: absolute;
+    width: 268px;
+    height: 152px;
+    left: 679px;
+    top: 141px;
+    bottom: 0%;
+    z-index: 3;
+    transition: 0.2s;
+}
+
+.text {
+    font-size: 34px;
+    color: Black;
+    position: absolute;
+    z-index: 2;
+    font-family: 'Amatic SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 81px;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+
+.norwaytext {
+    position: absolute;
+    width: 445px;
+    height: 78px;
+    left: 1371px;
+    top: 301px;
+
+    transition: 0.2s;
+}
+
+.polandtext {
+    position: absolute;
+    width: 445px;
+    height: 78px;
+    left: 1379px;
+    top: 514px;
+
+    transition: 0.2s;
+}
+
+.thailandtext {
+    position: absolute;
+    width: 445px;
+    height: 78px;
+    left: 1379px;
+    top: 413px;
+
+    bottom: 100px;
+    transition: 0.2s;
+}
+
+.lithuaniatext {
+    position: absolute;
+    width: 445px;
+    height: 78px;
+    left: 1375px;
+    top: 626px;
+
+    font-family: 'Amatic SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 81px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    transition: 0.2s;
+}
+
+.spaintext {
+    position: absolute;
+    width: 445px;
+    height: 78px;
+    left: 1371px;
+    top: 189px;
+
+    bottom: 160px;
+    transition: 0.2s;
+}
+
+.latviatext {
+    position: absolute;
+    width: 445px;
+    height: 78px;
+    left: 1371px;
+    top: 76px;
+    z-index: 10;
+    transition: 0.2s;
+}
+
+.thailandcontainer:hover .thailandtext {
+    transform: scale(1.1);
+    text-shadow: 0 0 5px white;
+}
+
+.thailand:hover {
+    transform: scale(1.1);
+}
+
+.thailandtext:hover {
+    transform: scale(1.1);
+}
+
+.lithuaniacontainer:hover .lithuaniatext {
+    transform: scale(1.1);
+    text-shadow: 0 0 5px white;
+}
+
+.lithuania:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.polandcontainer:hover .polandtext {
+    transform: scale(1.1);
+    text-shadow: 0 0 5px white;
+}
+
+.polandtext:hover .poland {
+    transform: scale(1.1);
+    text-shadow: 0 0 5px white;
+}
+
+
+
+.poland:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.norwaycontainer:hover .norwaytext {
+    transform: scale(1.1);
+    text-shadow: 0 0 5px white;
+}
+
+.norway:hover {
+    transform: scale(1.1);
+}
+
+.latviacontainer:hover .latviatext {
+    transform: scale(1.1);
+    text-shadow: 0 0 5px white;
+}
+
+.latvia:hover {
+    transform: scale(1.1);
+}
+
+
+
+.spaincontainer:hover .spaintext {
+    transform: scale(1.1);
+    text-shadow: 0 0 5px white;
+}
+
+.spain:hover {
+    transform: scale(1.1);
+}
+
+
+
+.footer {
+    position: absolute;
+    width: 1920px;
+    height: 311px;
+    left: 0px;
+    top: 800px;
+}
+
+.copyright {
+    position: absolute;
+    width: 287px;
+    height: 22px;
+    left: 405px;
+    top: 1142px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+
+}

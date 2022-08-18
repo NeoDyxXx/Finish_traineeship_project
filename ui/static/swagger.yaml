@@ -1,0 +1,195 @@
+swagger: "2.0"
+info:
+  description: "Information visa centers and embassies in Belarus."
+  version: "1.2.1"
+  title: "UI"
+consumes:
+  - application/json
+produces:
+  - application/json
+
+paths:
+  /api/latvia:
+    get:
+      tags:
+        - Countries
+      summary: Shows the page with a choice of Latvian embassy or visa center
+      description: Shows the page with a choice of embassy or visa center
+      responses:
+        200:
+          description: Successfully show page
+
+  /api/lithuania:
+    get:
+      tags:
+        - Countries
+      summary: Shows the page with a choice of Lithuania embassy or visa center
+      description: Shows the page with a choice of embassy or visa center
+      responses:
+        200:
+          description: Successfully show page
+  
+  /api/poland:
+    get:
+      tags:
+        - Countries
+      summary: Shows the page with a choice of Poland embassy or visa center
+      description: Shows the page with a choice of embassy or visa center
+      responses:
+        200:
+          description: Successfully show page
+  
+  /api/thailand:
+    get:
+      tags:
+        - Countries
+      summary: Shows the page with a choice of Thailand embassy or visa center
+      description: Shows the page with a choice of embassy or visa center
+      responses:
+        200:
+          description: Successfully show page
+
+  /api/spain:
+    get:
+      tags:
+        - Countries
+      summary: Shows the page with a choice of Spain embassy or visa center
+      description: Shows the page with a choice of embassy or visa center
+      responses:
+        200:
+          description: Successfully show page
+          
+  /api/norway:
+    get:
+      tags:
+        - Countries
+      summary: Shows the page with a choice of Norway embassy or visa center
+      description: Shows the page with a choice of embassy or visa center
+      responses:
+        200:
+          description: Successfully show page
+# Visa center 
+          
+  /api/latvia/viscentr:
+    get:
+      tags:
+        - Visa centr
+      summary: List of Latvian embassies with additional information and geo-location 
+      description: Shows the page with a list of visa centrs and additional information and geo-location 
+      responses:
+        200:
+          description: Successfully show page
+
+  /api/lithuania/viscentr:
+    get:
+      tags:
+        - Visa centr
+      summary: List of Lithuanian embassies with additional information and geo-location 
+      description: Shows the page with a list of visa centrs and additional information and geo-location 
+      responses:
+        200:
+          description: Successfully show page
+  
+  /api/poland/viscentr:
+    get:
+      tags:
+        - Visa centr
+      summary: List of Polish embassies with additional information and geo-location
+      description: Shows the page with a list of visa centrs and additional information and geo-location 
+      responses:
+        200:
+          description: Successfully show page
+  
+  /api/thailand/viscentr:
+    get:
+      tags:
+        - Visa centr
+      summary: List of Thai embassies with additional information and geo-location 
+      description: Shows the page with a list of visa centrs and additional information and geo-location 
+      responses:
+        200:
+          description: Successfully show page
+
+  /api/spain/viscentr:
+    get:
+      tags:
+        - Countries
+      summary: List of Spanish embassies with additional information and geo-location
+      description: Shows the page with a list of visa centrs and additional information and geo-location 
+      responses:
+        200:
+          description: Successfully show page
+        
+  /api/norway/viscentr:
+    get:
+      tags:
+        - Visa centr
+      summary: List of Norwegian embassies with additional information and geo-location
+      description: Shows the page with a list of visa centrs and additional information and geo-location 
+      responses:
+        200:
+          description: Successfully show page
+          
+# Embassy
+
+
+  /api/latvia/embassy:
+    get:
+      tags:
+        - Embassy
+      summary: List of Latvian embassies with additional information and geo-location 
+      description: Shows the page with a list of embassies and additional information and geo-location 
+      responses:
+        200:
+          description: Successfully show page
+
+  /api/lithuania/embassy:
+    get:
+      tags:
+        - Embassy
+      summary: List of Lithuanian embassies with additional information and geo-location 
+      description: Shows the page with a list of embassies and additional information and geo-location 
+      responses:
+        200:
+          description: Successfully show page
+  
+  /api/poland/embassyr:
+    get:
+      tags:
+        - Embassy
+      summary: List of Polish embassies with additional information and geo-location  
+      description: Shows the page with a list of embassies and additional information and geo-location 
+      responses:
+        200:
+          description: Successfully show page
+  
+  /api/thailand/embassy:
+    get:
+      tags:
+        - Embassy
+      summary: List of Thai embassies with additional information and geo-location 
+      description: Shows the page with a list of embassies and additional information and geo-location 
+      responses:
+        200:
+          description: Successfully show page
+          
+
+  /api/spain/embassy:
+    get:
+      tags:
+        - Embassy
+      summary: List of Spanish embassies with additional information and geo-location 
+      description: Shows the page with a list of embassies and additional information and geo-location 
+      responses:
+        200:
+          description: Successfully show page
+          
+  /api/norway/embassy:
+    get:
+      tags:
+        - Embassy
+      summary: List of Norwegian embassies with additional information and geo-location 
+      description: Shows the page with a list of embassies and additional information and geo-location 
+      responses:
+        200:
+          description: Successfully show page

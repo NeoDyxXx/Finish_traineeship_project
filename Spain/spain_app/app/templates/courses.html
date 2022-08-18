@@ -1,0 +1,205 @@
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/style.css')}} ">
+</head>
+<body     bgcolor= "#E5E5E5">
+<style>
+.date {
+    margin-left: 1000px;
+    vertical-align: middle;
+}
+/*лого (компас)*/
+.center-img {
+  text-align: center;
+}
+
+.wrapper {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 200px;
+}
+
+.grid-item {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
+    transition: box-shadow .3s;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.grid-item .image {
+    height: 200px;
+    overflow: hidden;
+}
+.grid-item .info {
+    position: relative;
+    height: calc(100% - 200px);
+    padding: 16px 14px 80px 14px;
+}
+.grid-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+}
+.grid-item .image img  {
+      transition: transform 280ms ease-in-out;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid-item:hover .image img  {
+    transform: scale(1.1);
+}
+.info h2 {
+    font-family: 'Roboto', Тahoma, sans-serif;
+    color: #3a3a3a;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.info-text p {
+    font-size: 15px;
+    line-height: 20px;
+    font-family: Verdana, sans-serif;
+    margin-bottom: 10px;
+}
+.info-text p:last-child {
+    margin-bottom: 0;
+}
+.grid-item .button-wrap {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    text-align: center;
+}
+/* Кнопка подробнее */
+.atuin-btn {
+
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 12px 30px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Roboto', Тahoma, sans-serif;
+    background: #878787;
+    cursor: pointer;
+    border: 2px solid #CBCFD4;
+}
+.atuin-btn:hover,
+.atuin-btn:active,
+.atuin-btn:focus {
+    color: #FFF;
+}
+.atuin-btn:after,
+.atuin-btn:before {
+    position: absolute;
+    height: 4px;
+    left: 50%;
+    background: #878787;
+    bottom: -6px;
+    content: "";
+    transition: all 280ms ease-in-out;
+    width: 0;
+}
+.atuin-btn:before {
+    top: -6px;
+}
+.atuin-btn:hover:after,
+.atuin-btn:hover:before,
+.atuin-btn:active:after,
+.atuin-btn:active:before,
+.atuin-btn:focus:after,
+.atuin-btn:focus:before {
+    width: 100%;
+    left: 0;
+}
+.line {
+width: 100%;
+height: 200px;
+}
+
+.footer1 {
+    width: 100%;
+    height: 311px;
+    left: 0px;
+    top: 800px;
+}
+
+.copyright1 {
+    width: 287px;
+    height: 22px;
+    left: 405px;
+    top: 1142px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+
+}
+
+.center {
+text-align: center
+}
+
+</style>
+</head>
+
+    <section class="wrapper">
+
+        <div class="line">
+        <a href="#map">
+            <p class="country">Страны</p>
+        </a>
+        <img src="{{ url_for('static', filename= 'img/dot1.png') }}" class="country_dot">
+
+
+        <a href="/news">
+            <p class="news">Новости</p>
+        </a>
+        <img src="{{ url_for('static', filename= 'img/dot2.png') }}" class="news_dot">
+        <a href="/add">
+            <p class="add">Реклама</p>
+        </a>
+        <img src="{{ url_for('static', filename= 'img/dot3.png') }}" class="add_dot">
+        <a href="/regist">
+            <p class="regist">Регистрация</p>
+        </a>
+        <img src="{{ url_for('static', filename= 'img/dot4.png') }}" class="regist_dot">
+        <p class="logo_text">The loop</p>
+
+        <img src="{{ url_for('static', filename= 'img/newlogo.png') }}" class="logo">
+</div>
+        {% for doc in report %}
+            <article class="grid-item">
+                <div class="info">
+                    <h2> {{ doc[0] }}</h2>
+                    <div class="info-text">
+                        <p class="center">Уровень: {{ doc[1] }}</p>
+                    </div>
+                    <div class="button-wrap">
+                        <a class="atuin-btn" href= {{ doc[2] }} >{{ doc[3] }}</a>
+
+                    </div>
+                </div>
+            </article>
+        {% endfor %}
+
+
+        <img src="{{ url_for('static', filename= 'img/Rectangle.svg') }}" class="footer1">
+        <p class="copyright1">  Copyright © 2022. Все права защищены </p>
+    </section>
+</body>
+</html>

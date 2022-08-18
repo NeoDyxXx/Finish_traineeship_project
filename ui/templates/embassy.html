@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style_latvia_viscentr.css">
+  </head>
+  <body>
+	{% for item in seq %}
+	  <p> address: {{ item[2] }}  <p/>
+          <p> email: {{ item[3] }}  <p/>
+          <p> phone: {{ item[6] }}  <p/>
+          <p> ________________________  <p/>
+
+    {%- endfor %}
+  </body>
+<head>
+    <title>Быстрый старт. Размещение интерактивной карты на странице</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=0cf5efcf-4155-4d15-b5e7-9dbfdcc17a88&lang=ru_RU" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init(){
+            var myMap = new ymaps.Map("map", {
+                center: [55.76, 37.64],
+                zoom: 10
+            }),
+         myGeoObject = new ymaps.GeoObject({
+            // Описание геометрии.
+            geometry: {
+                type: "Point",
+                coordinates: [55.8, 37.8]
+            },
+        }
+        );
+        myMap.geoObjects.add(myGeoObject);
+        
+        
+        }
+        
+    </script>
+
+    
+</head>
+
+<body>
+    <div id="map" style="width: 600px; height: 400px"></div>
+</body>
+
+</html>s

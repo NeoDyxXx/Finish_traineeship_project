@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+    <div class="ui main text container">
+        <h1 class="title" id="titlereg">
+            Profile setting
+        </h1>
+        <img class="ui small left floated circular image" src="">
+        <h2 class="user-username">Username: {{ user.username }}</h2>
+        <h2 class="user-mail">Email: {{ user.email }}</h2>
+    </div>
+    <div class="pagelogin">
+        <div class="wrapper">
+            {% with errors = get_flashed_messages(category_filter=["message"]) %}
+                {% if errors %}
+                    <div class="alert-message block-message error" id="error-msg">
+                        <a class="close" href="#">Back</a>
+                        <ul>
+                            {%- for msg in errors %}
+                                <li>{{ msg }}</li>
+                            {% endfor -%}
+                        </ul>
+                    </div>
+                {% endif %}
+            {% endwith %}
+            <form class="ui-form" id="forml" action="" method="post">
+                <div class="alert-message" id="error-msg">
+                        <a class="close" href="#"></a>
+                        <ul>
+                            {%- for msg in errors %}
+                                <li>{{ msg }}</li>
+                            {% endfor -%}
+                        </ul>
+                    </div>
+            </form>
+
+            <form class="ui-form" id="formelastic" action="/home" method="post">
+                {{ form.hidden_tag() }}
+                <div class="form-group-dropdown" id="country-state">
+                    {{ form.state_country.label() }}
+                        {{ form.state_country(class_="form-country") }}
+                </div>
+                <div class="form-group-dropdown" id="mail-state">
+                  {{ form.state_mail.label() }}
+                        {{ form.state_mail(class_="form-mail") }}
+                </div>
+                <button class="btn-primary" >Save </button>
+                <h1 class="btn-primary"> {{ message }} </h1>
+            </form>
+
+{#            <a class="btn-primary" id="exit" href="/"> Back</a>#}
+            <a href="/">
+                <img src="static/img/Arrow.png" class="button-user">
+            </a>
+
+        </div>
+        <div class="porosya"></div>
+    </div>
+
+{% endblock content %}

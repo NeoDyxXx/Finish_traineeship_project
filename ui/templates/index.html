@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+</head>
+
+<body>
+
+
+    <div class="page">
+
+        <a href="#map">
+            <p class="country">Страны</p>
+        </a>
+        <img src="static/img/dot1.png" class="country_dot">
+        <a href="#map">
+            <img src="static/img/Arrow.png" class="button">
+        </a>
+
+        <a href="/news">
+            <p class="news">Новости</p>
+        </a>
+        <img src="static/img/dot2.png" class="news_dot">
+        <a href="/add">
+            <p class="add">Реклама</p>
+        </a>
+        <img src="static/img/dot3.png" class="add_dot">
+        <a href="/regist">
+            <p class="regist">Регистрация</p>
+        </a>
+        <img src="static/img/dot4.png" class="regist_dot">
+        <p class="logo_text">The loop</p>
+
+        <div class="porosya"> 
+        </div>
+
+        <img src="static/img/border.svg" class="border">
+
+        <img src="static/img/newlogo.png" class="logo">
+
+
+         
+        <iframe src="/templates/news.html" class="news_frame">
+        </iframe>
+        
+    </div>
+
+    <div class="main-container" id="map">
+
+        <div class="norwaycontainer">
+            <a href="/norway"><img class="norway" src="static/img/norway.svg"></a>
+            <p class="norwaytext text">Норвегия</p>
+        </div>
+
+        <div class="polandcontainer">
+            <a href="/poland"><img class="poland" src="static/img/poland.svg"></a>
+            <a href="/poland"><p class="polandtext text">Польша</p></a>
+        </div>
+
+        <div class="lithuaniacontainer">
+            <a href="/lithuania"><img class="lithuania" src="static/img/lithuania.svg"></a>
+            <a href="/lithuania"><p class="lithuaniatext text">Литва </p></a>
+        </div>
+
+        <div class="thailandcontainer">
+            <a href="/thailand"><img class="thailand" src="static/img/thailand.svg"></a>
+            <a href="/thailand"><p class="thailandtext text">Тайланд</p></a>
+        </div>
+
+        <div class="spaincontainer">
+            <a href="/spain"><img class="spain" src="static/img/spain.svg"></a>
+            <a href="/spain"><p class="spaintext text">Испания</p></a>
+        </div>
+
+        <div class="latviacontainer">
+            <a href="/latvia"><p class="latviatext text">Латвия</p></a>
+            <a href="/latvia"><img class="latvia" src="static/img/latvia.svg"></a>
+        </div>
+        <img src="static/img/Rectangle.svg" class="footer">
+        <p class="copyright">  Copyright © 2022. Все права защищены </p>
+    </div>
+
+
+</body>
+
+</html>

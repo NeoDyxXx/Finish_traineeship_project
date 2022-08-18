@@ -1,0 +1,18 @@
+{news:{date:'dd-mm-yyyy', title:'Title1', body:'Body1', link:'http://...'}} <-if you want to add your custom fields, then put them here (key-value).
+{news:{date:'dd-mm-yyyy', title:'Title2', body:'Body2', link:'http://...'}}
+...
+---------------------------------------------------------------------------
+{consulate:{country:'Spain', address:'City1,street1,building1', index:'111111', email:'cat@dog.com', telephone1:'+375000000000', telephone2:'+375111111111', worktime: 'mon-fr 9:00-15:00'}} <-if you want to add your custom fields, then put them here (key-value).
+{consulate:{country:'Spain', address:'City2,street2,building2', index:'222222', email:'parrot@dog.com', telephone1:'+375000000000',  worktime: 'mon-fr 9:00-15:00'}}
+...
+---------------------------------------------------------------------------
+{visaac:{country:'Spain', address:'City1,street1,building1', index:'111111', email:'pig@dog.com', issue_worktime:'mon-fr 9:00-15:00', apply_worktime:'mon-fr 9:00-15:00', telephone1:'+375000000000',telephone2:'+375111111111'}} <-if you want to add your custom fields, then put them here (key-value).
+{visaac:{country:'Spain', address:'City2,street2,building2', index:'222222', email:'rat@dog.com', apply_worktime:'mon-fr 9:00-15:00'/*if there is only one working time*/, telephone1:'+375000000000'}}
+...
+---------------------------------------------------------------------------
+{appointment:{country:'Spain', address:'Grodno', category:'Category1','subcategory:'Subcategory1', appointmentTime:'dd-mm-yyyy hh-mm'}} <-if you want to add your custom fields, then put them here (key-value).
+{appointment:{country:'Spain', address:'Brest', category:'Category2',appointmentTime:'dd-mm-yyyy hh-mm'}}
+...
+---------------------------------------------------------------------------
+{advertisement:{language:'Spanish', description:'Language for begginers 3 mounth of learning', price:'120$'}}//add fields according to the scrapper
+{advertisement:{}}

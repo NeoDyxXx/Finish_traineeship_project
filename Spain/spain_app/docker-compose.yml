@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  Elasticsearch:
+    image: elasticsearch:8.2.2
+    container_name: elasticsearch
+    restart: always
+    environment:
+      - xpack.security.enabled=false
+      - "discovery.type=single-node"
+    ports:
+    - '9200:9200'
+  app_spain:
+    build:
+      context: .
+      dockerfile: Dockerfile-scrap
+    volumes:
+    - ./app:/app
+    ports:
+      - 5050:5050
+
+    command: sh -c "python3 app.py"
+    depends_on:
+    - Elasticsearch
+
+  flask_app_spain:
+    build:
+      context: .
+      dockerfile: Dockerfile-app
+    volumes:
+    - ./app:/app
+    ports:
+      - 5000:5000
+
+    command: sh -c "python3 flask_app_spain.py"
+    depends_on:
+    - app_spain

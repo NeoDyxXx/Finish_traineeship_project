@@ -1,0 +1,209 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "sean",
+    "version": "1.0.0",
+    "title": "Latviya is the best country!",
+    "license": {
+      "name": "Lena_&_Nikolay"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://192.168.103.139:5000/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Latviya Request",
+      "description": "Example API for requesting and return Latviya requests"
+    }
+  ],
+  "paths": {
+    "/latvia/visa_center": {
+      "get": {
+        "tags": [ "Visa Center Request"  ],
+        "summary": "Get visa center request",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+               "text/plain":
+               {
+                 "schema": {
+                   "$ref": "#/components/schemas/visa_centr"
+                 }
+               },
+              "application/json": {
+                "schema": {
+                    "$ref": "#/components/schemas/visa_centr"
+                }
+              },
+              "text/json":{
+                 "schema": {
+                    "$ref": "#/components/schemas/visa_centr"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Failed. Misunderstood Request."
+          },
+          "404": {
+            "description": "Failed. Visa request not found."
+          }
+        }
+      }
+    },
+    "/latvia/embassy": {
+      "get": {
+        "tags": [
+          "Embassy Request"
+        ],
+        "summary": "Get embassy request",
+        "parameters": [ "" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+               "text/plain":
+               {
+                 "schema": {
+                   "$ref": "#/components/schemas/embassy_information"
+                 }
+               },
+              "application/json": {
+                "schema": {
+                    "$ref": "#/components/schemas/embassy_information"
+                }
+              },
+              "text/json":{
+                 "schema": {
+                    "$ref": "#/components/schemas/embassy_information"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Failed. Misunderstood Request."
+          },
+          "404": {
+            "description": "Failed. Embassy request not found."
+          }
+        }
+      }
+    },
+    "/latvia/info": {
+      "get": {
+        "tags": [
+          "Consulate Request"
+        ],
+        "summary": "Get consulate request",
+
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+               "text/plain":
+               {
+                 "schema": {
+                   "$ref": "#/components/schemas/consulate_info"
+                 }
+               },
+              "application/json": {
+                "schema": {
+                    "$ref": "#/components/schemas/consulate_info"
+                }
+              },
+              "text/json":{
+                 "schema": {
+                    "$ref": "#/components/schemas/consulate_info"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Failed. Misunderstood Request."
+          },
+          "404": {
+            "description": "Failed. Consulate request not found."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "visa_centr":
+      {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ТЕЛЕФОН": {
+            "type": "string"
+          },
+          "АДРЕСА ВИЗОВЫХ ЦЕНТРОВ": {
+            "type": "string"
+          },
+          "АДРЕСА ЭКСПРЕСС-ЦЕНТРОВ": {
+            "type": "string"
+          },
+          "ГРАФИК РАБОТЫ ВИЗОВЫХ ЦЕНТРОВ": {
+            "type": "string"
+          }
+        }
+      },
+      "consulate_info":
+      {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "e-mail": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
+          }
+        }
+      },
+      "embassy_information":
+      {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "e-mail": {
+            "type": "string"
+          },
+          "time_of_work": {
+            "type": "string"
+          },
+           "news": {
+            "type": "string"
+          }
+        }
+      },
+      "consulate_news":
+      {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

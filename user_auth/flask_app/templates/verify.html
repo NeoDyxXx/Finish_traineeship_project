@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+{#    <div style="margin-top: 50px;" class="ui container">#}
+{#        <h1 class="ui center aligned header">Register page</h1>#}
+{#        {% with errors = get_flashed_messages() %}#}
+{#            {% if errors %}#}
+{#                <div class="alert-message block-message error">#}
+{#                    <a class="close" href="#">×</a>#}
+{#                    <ul>#}
+{#                        {%- for msg in errors %}#}
+{#                            <li>{{ msg }}</li>#}
+{#                        {% endfor -%}#}
+{#                    </ul>#}
+{#                </div>#}
+{#            {% endif %}#}
+{#        {% endwith %}#}
+{#        <form class="ui inverted form" action="" method="post">#}
+{#            {{ form.hidden_tag() }}#}
+{#            <div class="field">#}
+{#                <label>Confirmation code</label>#}
+{#                {{ form.otp }}#}
+{#            </div>#}
+{#            <button class="fluid ui purple button" type="submit">Verify</button>#}
+{#        </form>#}
+{#    </div>#}
+    <div class="pagelogin">
+        <div class="wrapper">
+            <h1 class='title' id="titlereg">Sign Up Form</h1>
+            <p class='description' id="descreg">Please check your email for verification</p>
+            {% with errors = get_flashed_messages(category_filter=["message"]) %}
+                {% if errors %}
+                    <div class="alert-message" id="error-msg">
+                        <a class="close" href="#"></a>
+                        <ul>
+                            {%- for msg in errors %}
+                                <li>{{ msg }}</li>
+                            {% endfor -%}
+                        </ul>
+                    </div>
+                {% endif %}
+            {% endwith %}
+            <form class="ui-form" action="" method="post">
+                {{ form.hidden_tag() }}
+                <div class="form-group" id="otp">
+                    {{ form.otp }}
+                </div>
+                <button class="btn-primary" id="verify-button">Verify</button>
+            </form>
+        </div>
+        <div class="porosya"></div>
+    </div>
+
+{% endblock content %}

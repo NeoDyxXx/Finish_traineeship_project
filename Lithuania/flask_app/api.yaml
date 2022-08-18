@@ -1,0 +1,119 @@
+openapi: 3.0.3
+info:
+  title: Lithuania Scraper
+  description: An API that allows users to get infomation about visa-centre and embassy of Lithuania and their news in Belarus
+  version: 1.0.0
+paths:
+  /lithuania/api/visa-centre:
+    get:
+      tags:
+        - Visa Centres
+      description: Information about Visa-centres
+      responses:
+        200:
+          description: Successful pull of visa-centres information
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    Страна:
+                      type: string
+                      example: Lithuania
+                    Тип:
+                      type: string
+                      example: Визовый центр
+                    Номер телефона:
+                      type: string
+                      example: +375 17 388 02 82
+                    Email:
+                      type: string
+                      example: example@gmail.com
+                    Список:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          Город:
+                            type: string
+                            example: Брест
+                          Адрес:
+                            type: string
+                            example: ул. Пушкина 2
+                          Время работы:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                day:
+                                  type: string
+                                  example: Понедельник – Пятница
+                                hours:
+                                  type: string
+                                  example: 08:00 - 16:00
+                                descripyion:
+                                  type: string
+                                  example: Прием документов
+
+
+
+  /lithuania/api/embassy:
+    get:
+      tags:
+        - Embassy
+      description: Information about embassy
+      responses:
+        200:
+          description: Successful pull of embassy
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    Страна:
+                      type: string
+                      example: Lithuania
+                    Тип:
+                      type: string
+                      example: Посольство
+                    Адрес:
+                      type: string
+                      example: ул. Пушкина 12
+                    Телефон:
+                      type: string
+                      example: +375 17 285 2449
+                    Факс:
+                      type: string
+                      example: +375 17 285 2449
+                    Email:
+                      type: string
+                      example: amb.by@urm.lt
+                    Время работы:
+                      type: string
+                      example: Понедельник - Четверг  9.00-18.00
+
+  /lithuania/api/news:
+    get:
+      tags:
+        - News
+      description: News about embassies and visa centers
+      responses:
+        200:
+          description: Successful pull of news
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    Название:
+                      type: string
+                      example: Прекращение выдачи виз
+                    Дата:
+                      type: string
+                      example: 28 февраля 2022
+                    Ссылка:
+                      type: string
+                      example: https://by.mfa.lt/by/ru/news/litobskoe-posol-jstbo-b-belarusi-bozovnoblaaet-bjydachu-biz-1

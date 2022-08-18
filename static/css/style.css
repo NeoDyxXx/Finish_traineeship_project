@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #161925 ;
+	font-family: 'Saira', sans-serif;
+}
+.page{
+height:100vh;
+width:100%;
+background: url(/static/img/page.png);
+}
+
+.button{
+	width: 200px;
+	position: absolute;
+	bottom: 50px;
+	right: 50px;
+}
+.main-container{
+width: 1540px;
+height: 960px;
+margin: 60px auto;
+position: relative;
+
+}
+
+.norway{
+	width: 523px;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	transition: 0.2s;
+	left: 0;
+}
+
+.lithuania{
+width: 260px;
+position: absolute;
+z-index:1;
+top: 155px;
+transition: 0.2s;
+right:450px;
+
+}
+.poland{
+width: 380px;
+position: absolute;
+z-index: 0;
+right: 580px;
+top: 280px;
+transition: 0.2s;
+}
+.spain{
+	position: absolute;
+	z-index: 1;
+	width: 356px;
+	bottom: 0;
+	left: 200px;
+	transition: 0.2s;
+}
+.thailand{
+width: 330px;
+position: absolute;
+z-index: 1;
+bottom: 0;
+right: 0;
+transition: 0.2s;
+
+}
+
+.latvia{
+	width: 422px;
+	top: 0;
+	right: 350px;
+	position: absolute;
+	z-index:3;
+	transition: 0.2s;
+}
+
+.text{
+font-size: 34px;
+color: white;
+position: absolute;
+z-index: 2;
+letter-spacing: 5px;
+}
+
+
+.norwaytext{
+top: 400px;
+left: 0;
+transition: 0.2s;
+}
+
+.polandtext{
+right: 900px;
+top: 500px;
+transition: 0.2s;
+}
+
+.thailandtext{
+
+bottom: 100px;
+right: 280px;
+transition: 0.2s;
+}
+
+.lithuaniatext{
+top: 230px;
+right:350px;
+z-index: 100;
+transition: 0.2s;
+}
+
+.spaintext{
+bottom: 160px;
+left: 500px;
+transition: 0.2s;
+}
+
+.latviatext{
+
+	top: 100px;
+	right: 750px;
+	z-index: 10;
+	transition: 0.2s;
+}
+
+.thailandcontainer:hover .thailandtext{
+	transform: scale(1.1);
+	text-shadow: 0 0 5px white;
+}
+
+.thailand:hover{
+	transform: scale(1.1);
+}
+
+.lithuaniacontainer:hover .lithuaniatext{
+	transform: scale(1.1);
+	text-shadow: 0 0 5px white;
+}
+
+.lithuania:hover{
+	transform: scale(1.1);
+}
+
+.polandcontainer:hover .polandtext{
+	transform: scale(1.1);
+	text-shadow: 0 0 5px white;
+}
+
+.poland:hover{
+	transform: scale(1.1);
+}
+
+.norwaycontainer:hover .norwaytext{
+	transform: scale(1.1);
+	text-shadow: 0 0 5px white;
+}
+
+.norway:hover{
+	transform: scale(1.1);
+}
+
+.latviacontainer:hover .latviatext{
+	transform: scale(1.1);
+	text-shadow: 0 0 5px white;
+}
+
+.latvia:hover{
+	transform: scale(1.1);
+}
+
+
+
+.spaincontainer:hover .spaintext{
+	transform: scale(1.1);
+	text-shadow: 0 0 5px white;
+}
+
+.spain:hover{
+	transform: scale(1.1);
+}

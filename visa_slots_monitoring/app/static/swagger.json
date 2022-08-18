@@ -1,0 +1,66 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "description": "Realtime monitoring of visa application slots",
+      "version": "1.0.0",
+      "title": "Realtime-Monitoring-Flask-App"
+    },
+    "tags": [
+      {
+        "name": "Visa Application Slots",
+        "description": "Example API for requesting and return visa info for country"
+      }
+    ],
+    "paths": {
+      "/{country_code}": {
+        "parameters": [
+          {
+            "name": "country_code",
+            "in": "path",
+            "required": true,
+            "description": "Country Code",
+            "type": "string"
+          }
+        ],
+        "get": {
+          "tags": [
+            "Visa Application Slots"
+          ],
+          "summary": "Get visa info for given country",
+          "parameters": [
+            {
+              "in": "path",
+              "name": "country_code",
+              "required": true,
+              "description": "Country Code"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Failed. Misunderstood Request."
+            },
+            "404": {
+              "description": "Failed. Data not found."
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Country Slots Info": {
+          "properties": {
+            "visa_country": {
+                "type": "string"
+            },
+            "visa_info": {
+              "type": "string"
+            }            
+          }
+        }
+      }
+    }
+  }

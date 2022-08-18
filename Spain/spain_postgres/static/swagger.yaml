@@ -1,0 +1,93 @@
+swagger: "2.0"
+info:
+  description: "Web-app scrapper information about Spain visa centers in Belarus."
+  version: "1.0.0"
+  title: "Spain scrapper"
+consumes:
+  - application/json
+produces:
+  - application/json
+
+paths:
+  /api/to-file:
+    get:
+      operationId: serv.create_file
+      tags:
+        - Visa centers
+      summary: Get information about visa centers
+      description: Scrapping information about visa centers from website
+      responses:
+        200:
+          description: Successfully scrap information operation
+
+  /api/visa-center:
+    get:
+      operationId: serv.read_visa_center
+      tags:
+        - Visa centers
+      summary: Get the entire information of visa centers
+      description: Read the list of visa centers
+      responses:
+        200:
+          description: Successfully read visa centers list operation
+          schema:
+            type: array
+            items:
+              properties:
+                Страна:
+                  type: string
+                Тип:
+                  type: string
+                Город:
+                  type: string
+                Адрес:
+                  type: string
+                Часы работы:
+                  type: object
+                  properties:
+                    Время выдачи паспортов:
+                      type: string
+                    Время приема:
+                      type: string
+                Тел:
+                  type: string
+                почта:
+                  type: string
+
+  /api/news:
+    get:
+      operationId: serv.create_correct_data
+      tags:
+        - News of visa center
+      summary: Get the news of visa centers
+      description: Read the list about news of visa centers
+      responses:
+        200:
+          description: Successfully read news of visa centers list operation
+          schema:
+            type: array
+            items:
+              properties:
+                description:
+                  type: string
+                image:
+                  type: string
+                sourceName:
+                  type: string
+                time:
+                  type: string
+                title:
+                  type: string
+                url:
+                  type: string
+
+  /api/news_in_file:
+    get:
+      operationId: serv.save_in_file
+      tags:
+        - News of visa center
+      summary: Get information about news of visa centers
+      description: Scrapping information about news of visa centers from website
+      responses:
+        200:
+          description: Successfully scrap information operation

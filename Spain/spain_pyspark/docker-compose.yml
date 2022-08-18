@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  Elasticsearch:
+    image: elasticsearch:7.16.2
+    container_name: elasticsearch1
+    restart: always
+    volumes:
+    - elastic_data:/usr/share/elasticsearch/data/
+
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      discovery.type: single-node
+    ports:
+    - '9200:9200'
+    - '9300:9300'
+
+volumes:
+  elastic_data:
+
+networks:
+  app-network:
+    driver: bridge

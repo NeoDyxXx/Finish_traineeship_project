@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style_latvia_viscentr.css">
+  </head>
+  <body>
+	{% for item in seq %}
+	  <p> address: {{ item[2] }}  <p/>
+          <p> email: {{ item[3] }}  <p/>
+          <p> phone: {{ item[6] }}  <p/>
+          <p> ________________________  <p/>
+
+    {%- endfor %}
+  </body>
+</html>
